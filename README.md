@@ -1,46 +1,101 @@
-# Getting Started with Create React App
+# Mines & Bombs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A polished browser-based risk game inspired by classic Mines gameplay. Players choose a bet, reveal safe tiles to increase their multiplier, and decide whether to cash out or keep pushing their luck.
+
+## Overview
+
+This project is a single-page React and TypeScript application focused on simple game interaction, responsive UI feedback, and lightweight probability-driven gameplay. The experience is designed to feel fast and readable while still giving the player useful decision-making information during each round.
+
+## Features
+
+- Adjustable board sizes from `3 x 3` to `6 x 6`
+- Configurable bomb count and bet amount
+- Live multiplier and payout tracking
+- Risk meter showing the probability of the next tile being safe
+- Expected value comparison for cashing out versus continuing
+- Sound effects with volume control
+- End-of-round board reveal so players can review the outcome
+- Reset and replay flow for quick repeated rounds
+
+## Tech Stack
+
+- React
+- TypeScript
+- Create React App
+- React Testing Library
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) installed
+- `npm` available in your terminal
+
+### Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/mines-game.git
+cd mines-game
+npm install
+```
+
+### Run Locally
+
+```bash
+npm start
+```
+
+The app will open in development mode at [http://localhost:3000](http://localhost:3000).
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the development server.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm test -- --watchAll=false`
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the test suite once without watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Creates an optimized production build in the `build/` directory.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How To Play
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Choose the grid size, bomb count, and bet amount.
+2. Start the round.
+3. Reveal tiles one at a time.
+4. Each safe tile increases the payout multiplier.
+5. Cash out before hitting a bomb to secure your winnings.
+6. If you hit a bomb, the round ends and the full board is revealed.
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```text
+mines-game/
+├── public/
+├── src/
+│   ├── App.tsx
+│   ├── App.test.tsx
+│   ├── index.tsx
+│   └── index.css
+├── package.json
+└── tsconfig.json
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Notes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `node_modules/` and `build/` are excluded from Git and are recreated locally with `npm install` and `npm run build`.
+- No secret environment variables are required for the current version of the app.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Future Improvements
 
-## Learn More
+- Persistent score or balance history
+- Difficulty presets
+- Animations and richer round statistics
+- Mobile-specific UI refinements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is currently unlicensed and intended for educational or portfolio use unless otherwise noted.
