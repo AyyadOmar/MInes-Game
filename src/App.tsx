@@ -380,7 +380,7 @@ export default function App() {
   const tiles = range(total);
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0f172a", color: "#f8fafc", padding: 24 }}>
+    <div style={{ minHeight: "100vh", background: "#0f172a", color: "#f8fafc", padding: 24, display: "grid", alignItems: "center" }}>
       <style>{`
         @keyframes modalPop {
           0% { opacity: 0; transform: translateY(10px) scale(0.96); }
@@ -392,7 +392,7 @@ export default function App() {
           100% { transform: translateY(210px) rotate(540deg); opacity: 0; }
         }
       `}</style>
-      <div style={{ maxWidth: 1000, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 2fr", gap: 24 }}>
+      <div style={{ width: "100%", maxWidth: 1000, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 2fr", gap: 24 }}>
         {/* Controls Panel */}
         <div style={{ background: "#1e293b", padding: 20, borderRadius: 16 }}>
           <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8 }}>Mines & Bombs</h1>
